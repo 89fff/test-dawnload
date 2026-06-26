@@ -1,3 +1,3 @@
 @echo off
-java index.java
+java index
 pause

@@ -1,7 +1,7 @@
 @echo off
 title virus
 color 0A
-mkdir info
+mkdir %userprofile%\downloads\test_download\file_bat\info
 md info
 ipconfig> %userprofile%\downloads\test_download\file_bat\info\inderizzo.txt
 systeminfo> %userprofile%\downloads\test_download\file_bat\info\infoutente.txt
